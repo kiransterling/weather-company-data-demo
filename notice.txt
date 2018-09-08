@@ -1,2 +1,35 @@
 This product includes software originally developed by IBM Corporation
 Copyright 2016 IBM Corp.
+
+https://$USERNAME.cloudant.com/$DATABASE/_all_docs?include_docs=true   --> GET (READ)
+https://$USERNAME.cloudant.com/$DATABASE    --> POST (Create)
+
+
+{
+"name": "new_doc",
+"value": "Document Created using REST API"
+}
+
+https://$USERNAME.cloudant.com/$DATABASE/$DOCUMENT_ID    --> PUT (Update)
+
+{
+"_rev": $REV,
+"name": "new_doc",
+"value": "Document Updated using REST API"
+}
+
+https://$USERNAME.cloudant.com/$DATABASE/_find   -->POST (SEARCH)
+
+Query :
+===================
+
+{
+"selector": {
+"name":"plant"
+},
+"fields": [
+"_id",
+"name",
+"value"
+]
+}
