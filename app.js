@@ -42,7 +42,7 @@ app.configure(function(){
 var appEnv = cfenv.getAppEnv();
 var weather_host = appEnv.services["weatherinsights"] 
         ? appEnv.services["weatherinsights"][0].credentials.url // Weather credentials passed in
-        : ""; // or copy your credentials url here for standalone
+        : "https://aec912f1-000f-4b2f-83f3-4f4cc613891c:OOqzfPe1ND@twcservice.mybluemix.net"; // or copy your credentials url here for standalone
 
 function weatherAPI(path, qs, done) {
     var url = weather_host + path;
